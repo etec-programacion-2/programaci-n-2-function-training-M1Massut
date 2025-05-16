@@ -3,7 +3,7 @@
 ## 👤 Identificación del Alumno
 - **Nombre:** [Máximo]
 - **Apellido:** [Massut]
-- **Curso:** [4Informatica]
+- **Curso:** [4-Informatica]
 
 ## 🤖 Consideraciones Éticas sobre el Uso de IA
 Este ejercicio está diseñado para desarrollar tus habilidades de programación. Por favor, ten en cuenta las siguientes consideraciones:

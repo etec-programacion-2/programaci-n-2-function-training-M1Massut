@@ -68,13 +68,19 @@ fun esAprobado(nota: Double): Boolean {// Si la nota es menor a 6.0, el alumno n
 
 // Etapa 2
 fun calcularPromedioTresNotas(nota1: Double, nota2: Double, nota3: Double): Double {
-    // Implementar aquí
-    return 0.0
+    
+    return (nota1 + nota2 + nota3) / 3
 }
 
 fun obtenerEstadoAlumno(nombre: String, apellido: String, nota: Double): String {
-    // Implementar aquí
-    return ""
+    val estado :String = if (nota >= 6.0) {
+        "Aprobado"
+    } else if (nota < 6.0 && nota >= 4.0) {
+        "Regular"
+    } else {
+        "Desaprobado"
+    }
+    return "El alumno $nombre $apellido está $estado con una nota de $nota"
 }
 
 // Etapa 3
