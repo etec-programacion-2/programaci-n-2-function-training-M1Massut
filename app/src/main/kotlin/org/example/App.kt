@@ -102,13 +102,17 @@ var aprobados = emptyList<String>()
 
 // Etapa 4
 fun generarBoletin(nombre: String, materias: List<String>, notas: List<Double>): String {
-    // Implementar aquí
-    return ""
+    val boletin=""
+    for (i in materias.indices) {
+        boletin += "${materias[i]}: ${notas[i]}\n"
+    }
+    return{$boletin}
+    
 }
 
 fun obtenerNotaMasAlta(notas: List<Double>): Double {
     // Implementar aquí
-    return 0.0
+    return notas.maxOrNull() ?: throw IllegalArgumentException("La lista de notas está vacía")
 }
 
 fun obtenerNotaMasBaja(notas: List<Double>): Double {
