@@ -54,12 +54,15 @@ fun main() {
 
 // Etapa 1
 fun calcularPromedio(nota1: Double, nota2: Double): Double {
-    // Implementar aquí
-    return 0.0
+
+    return (nota1 + nota2) / 2
+    
 }
 
-fun esAprobado(nota: Double): Boolean {
-    // Implementar aquí
+fun esAprobado(nota: Double): Boolean {// Si la nota es menor a 6.0, el alumno no está aprobado
+   if (nota >= 6.0) {
+        return true
+    }
     return false
 }
 
