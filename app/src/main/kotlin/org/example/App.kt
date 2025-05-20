@@ -101,12 +101,13 @@ var aprobados = emptyList<String>()
 }
 
 // Etapa 4
-fun generarBoletin(nombre: String, materias: List<String>, notas: List<Double>): String {
-    val boletin=""
+ fun generarBoletin(nombre: String, materias: List<String>, notas: List<Double>): String {
+    val boletin = StringBuilder() // Usamos  pStringBuilderara construir el boletín dando este que sirve para construir cadenas de texto de manera más eficiente
+    boletin.append("Boletín de $nombre:\n")
     for (i in materias.indices) {
-        boletin += "${materias[i]}: ${notas[i]}\n"
+        boletin.append("${materias[i]}: ${notas[i]}\n")
     }
-    return{$boletin}
+    return boletin.toString()
     
 }
 
@@ -117,10 +118,9 @@ fun obtenerNotaMasAlta(notas: List<Double>): Double {
 
 fun obtenerNotaMasBaja(notas: List<Double>): Double {
     // Implementar aquí
-    return 0.0
+    return notas.minOrNull() ?: throw IllegalArgumentException("La lista de notas está vacía")
 }
 
 fun contarAprobados(notas: List<Double>): Int {
-    // Implementar aquí
-    return 0
+    return notas.count { it >= 6.0 }
 }
